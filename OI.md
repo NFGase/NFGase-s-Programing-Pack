@@ -36,7 +36,7 @@
 
 17．深搜忘记使用什么数据结构，正确答案如后。一般情况下，深搜使用栈数据结构，广搜使用队列数据结构;具有n个顶点，e条边的图采用邻接表存储结构,进行深度与广度优先遍历运算的时间复杂度均为 $O(n+e)$ ；
 
-18. 快读快写返回值写成了`int`，实际上应该是`long long`，形如[AtCoder ABC324-B)](https://atcoder.jp/contests/abc324/tasks/abc324_b)。
+18. 快读快写返回值写成了`int`，实际上应该是`long long`，形如[AtCoder ABC324-B](https://atcoder.jp/contests/abc324/tasks/abc324_b)。
 
 ## $\texttt{Section 2 / OI部分重点知识点}$
 
