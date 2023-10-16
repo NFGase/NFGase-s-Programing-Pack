@@ -37,6 +37,10 @@
 17．深搜忘记使用什么数据结构，正确答案如后。一般情况下，深搜使用栈数据结构，广搜使用队列数据结构;具有n个顶点，e条边的图采用邻接表存储结构,进行深度与广度优先遍历运算的时间复杂度均为 $O(n+e)$ ；
 
 18. 快读快写返回值写成了`int`，实际上应该是`long long`，形如[AtCoder ABC324-B](https://atcoder.jp/contests/abc324/tasks/abc324_b)。
+19. 快读快写返回值写成了`int`，实际上应该是`long long`，形如[AtCoder ABC324-B](https://atcoder.jp/contests/abc324/tasks/abc324_b)；
+20. 使用`memset`赋值时不是 `0` 或 `0x3f3f3f`；
+21. 题目中有向图图里把双向图理解成了单向图，实际上，含有形如“可以从一个点到达另一个点”这句话的一般都是双向图。
+22. 开数组时没有看到以科学计数法形式写出的数据范围的系数。
 
 ## $\texttt{Section 2 / OI部分重点知识点}$
 
@@ -55,5 +59,3 @@
     - `map`是具有有序性的，`unordered_map`则是无序性的；
     
     - `map`适用于有顺序要求的场景，`unordered_map`则适用于有查找需求的场景，因为`unordered_map`的查找是 $O(1)$ 的，`map`则是 $O(log n)$ 的。
-    
-    - 
