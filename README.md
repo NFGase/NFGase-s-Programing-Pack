@@ -1,9 +1,9 @@
-## NFGase の OI 常用文件包
+## $\texttt{NFGase の OI 常用文件包}$
 
-### 我的各大OJ个人主页链接 & 博客链接
+### $texttt{我的各大OJ个人主页链接 & 博客链接}$
 
-- 我的[洛谷主页](https://www.luogu.com.cn/user/740004)
-- 我的[AtCoder主页](https://atcoder.jp/users/NFGase)
+- $texttt{我的[洛谷主页](https://www.luogu.com.cn/user/740004)}$
+- $texttt{我的[AtCoder主页](https://atcoder.jp/users/NFGase)}$
 - 我的[CodeForces主页](https://codeforces.com/profile/RoutineX)
 - 我的[LibreOJ主页](https://loj.ac/u/NFGase)
 - 我的[洛谷博客](https://www.luogu.com.cn/blog/NFGase/)
