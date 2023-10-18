@@ -43,7 +43,8 @@
 22. 开数组时没有看到以科学计数法形式写出的数据范围的系数；
 23. 二维数组开太大可能会导致 $\texttt{TLE}$；
 24. 取模没有取完，比如写`sum *= a;`时，题目要求取模，不能写`sum *= (a % mod);`，因为你只对 $\texttt{a}$ 取了模，没有对最终结果 $\texttt{sum}$ 进行取模；
-25. 在遍历一个数组时，需要对当前的数组下标取模所得的结果作为下标并访问，如`mx = max(mx, a[(i + 1) % mod]);`，此时下标需要从 $\texttt{0}$ 开始。
+25. 在遍历一个数组时，需要对当前的数组下标取模所得的结果作为下标并访问，如`mx = max(mx, a[(i + 1) % mod]);`，此时下标需要从 $\texttt{0}$ 开始；
+26. 在同时使用`cin`和`getline`来读取一个字符串且`cin`为先`getline`为后时，会发生后者无法输入的情况，这时需要把前面的`cin`改成`getchar`或者在`cin`和`getline`间写`getchar()`才可以解决问题。但是如果二者皆为`getchar`，那么二者之间是不可以写`getchar()`的，因为这样子会吃掉第二个字符串的第一个字符，如[P1308 [NOIP2011 普及组] 统计单词数](https://www.luogu.com.cn/problem/P1308)，代码见脚注$\texttt{1}$。
 
 ## $\texttt{Section 2 / OI部分重点知识点}$
 
@@ -62,3 +63,69 @@
     - `map`是具有有序性的，`unordered_map`则是无序性的；
     
     - `map`适用于有顺序要求的场景，`unordered_map`则适用于有查找需求的场景，因为`unordered_map`的查找是 $\texttt{O(1)}$ 的，`map`则是 $\texttt{O(log n)}$ 的。
+
+## $\texttt{Section 3 / 脚注}$
+
+$\texttt{1.}$代码如下
+
+- 出现的问题代码
+  
+  ```cpp
+  #include <iostream>
+  #include <string>
+  using namespace std;
+  string s1, s2;
+  int main(){
+      cin >> s1;
+      getline(cin, s2);
+      cout << s1 << endl << s2;
+      return 0;
+  }
+  ```
+
+- 第一种解决办法
+  
+  ```cpp
+  #include <iostream>
+  #include <string>
+  using namespace std;
+  string s1, s2;
+  int main(){
+      getline(cin, s1);
+      getline(cin, s2);
+      cout << s1 << endl << s2;
+      return 0;
+  }
+  ```
+
+- 第二种解决办法
+  
+  ```cpp
+  #include <iostream>
+  #include <string>
+  using namespace std;
+  string s1, s2;
+  int main(){
+      cin >> s1;
+      getchar();
+      getline(cin, s2);
+      cout << s1 << endl << s2;
+      return 0;
+  }
+  ```
+
+- 错误的`getchar()`用法
+  
+  ```cpp
+  #include <iostream>
+  #include <string>
+  using namespace std;
+  string s1, s2;
+  int main(){
+      getline(cin, s1);
+      getchar();
+      getline(cin, s2);
+      cout << s1 << endl << s2;
+      return 0;
+  }
+  ```
