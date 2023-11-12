@@ -1,6 +1,5 @@
 ## NFGase の OI 常用文件包
 
-
 ### 我的各大OJ个人主页链接 & 博客链接
 
 - 我的[洛谷主页](https://www.luogu.com.cn/user/740004)
