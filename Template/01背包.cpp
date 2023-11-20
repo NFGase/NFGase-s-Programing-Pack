@@ -1,4 +1,4 @@
-//https://www.luogu.com.cn/problem/P1048
+// https://www.luogu.com.cn/problem/P1048
 #include <iostream>
 #include <cstdio>
 using namespace std;
