@@ -21,4 +21,4 @@ P.S 我的码风不是这样子的，只是为了方便大家阅读QAQ
 
 ----
 
-^1: 有些 $LaTeX$ 语法GitHub不支持，可以自己下载一个MarkDown编辑器来看，这里推荐MarkText，就是下载慢。
+^1: 有些 $\LaTeX$ 语法GitHub不支持，可以自己下载一个MarkDown编辑器来看，这里推荐MarkText，就是下载慢。
