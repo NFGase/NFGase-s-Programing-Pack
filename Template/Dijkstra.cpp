@@ -22,13 +22,13 @@ namespace code{
         head[u] = cnt++;
     }
     int main(){
-        io::read(n, m, s);
+        std::cin >> n >> m >> s;
         now = s;
         for(int i = 1; i <= n; i++) dp[i] = mi;
         pri_que.push(std::make_pair(0, s));
         while(m--){
             int u, v, w;
-            io::read(u, v, w);
+            std::cin >> u >> v >> w;
             add_edge(u, v, w);
         }
         dp[s] = 0;
@@ -46,7 +46,7 @@ namespace code{
                 }
             }
         }
-        for(int i = 1; i <= n; i++) io::write(dp[i]), io::newb();
+        for(int i = 1; i <= n; i++) std::cout << dp[i], io::newb();
         return 0;
     }
 }

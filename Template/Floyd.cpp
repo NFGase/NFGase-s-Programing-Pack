@@ -27,20 +27,31 @@
 // 提示
 // 对于100%的数据，1 <= n <= 100，1 <= m <= 500，1 <= s，e，a，b <= n，1 <= c <= 1000
 #include <iostream>
-#include <cstdio>
-#include <climits>
-using namespace std;
-int n, m, a, b, dp[1001][1001];
-int main(){
-    cin >> n >> m >> a >> b;
-    for(int i = 1; i <= n; i++) dp[i][i] = 0;
-    for(int i = 1; i <= n; i++) for(int j = 1; j <= n; j++) dp[i][j] = 1145;
-    while(m--){
-        int s, e, c;
-        cin >> s >> e >> c;
-        dp[s][e] = c, dp[e][s] = c;
+namespace io{
+    template <typename T> inline void read(T& x){x = 0; bool f = false; char ch = getchar(); while(ch < '0' || ch > '9'){if(ch == '-') f = !f; ch = getchar();}while(ch >= '0' && ch <= '9'){x = (x << 3) + (x << 1) + (ch ^ 48); ch = getchar();} x = (f ? -x : x); return;}
+    template <typename T, typename... Args> inline void read(T& x, Args&...x_){read(x), read(x_...);}
+    template <typename T> inline void put(T x){if(x < 0) putchar('-'), x = -x; if(x > 9) put(x / 10); putchar(x % 10 + '0'); return ;}
+    template <typename T> inline void write(T x){put(x);}
+    template <typename T, typename... Args> inline void write(T x, Args...x_){write(x), write(x_...);}
+    inline void newb(){putchar(' ');}
+}
+namespace code{
+    int n, m, a, b, dp[1001][1001];
+    int main(){
+        std::cin >> n >> m >> a >> b;
+        for(int i = 1; i <= n; i++) dp[i][i] = 0;
+        for(int i = 1; i <= n; i++) for(int j = 1; j <= n; j++) dp[i][j] = 1145;
+        while(m--){
+            int s, e, c;
+            std::cin >> s >> e >> c;
+            dp[s][e] = c, dp[e][s] = c;
+        }
+        for(int k = 1; k <= n; k++) for(int i = 1; i <= n; i++) for(int j = 1; j <= n; j++) dp[i][j] = std::min(dp[i][j], dp[i][k] + dp[k][j]);
+        std::cout << dp[a][b];
+        return 0;
     }
-    for(int k = 1; k <= n; k++) for(int i = 1; i <= n; i++) for(int j = 1; j <= n; j++) dp[i][j] = min(dp[i][j], dp[i][k] + dp[k][j]);
-    cout << dp[a][b];
+}
+int main(){
+    code::main();
     return 0;
 }
