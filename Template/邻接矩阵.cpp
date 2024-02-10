@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 int n, m;
-bool mark [1001][1001];
+bool mark[1001][1001];
 int main(){
     cin >> n >> m;
     for(int i = 1; i <= m; i++){
