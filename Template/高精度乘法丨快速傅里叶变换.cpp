@@ -52,7 +52,7 @@ namespace code{
             }
             l++;
         }
-        while(res[top] == 0 && top > 1) top--;
+        while(res[top] == 0 && top > 0) top--;
         for(int i = top; i >= 0; i--) std::cout << res[i];
         return 0;
     }
